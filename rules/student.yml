@@ -1,0 +1,21 @@
+student:
+  name: Krishna Kumar
+  course: Cyber Security
+  project: Windows Detection Engineering Lab
+  tools:
+    - Kali Linux
+    - Windows 11
+    - Sysmon
+    - Sigma CLI
+    - Python
+
+
+Why it's included:
+
+Learned nested YAML.
+Learned lists.
+Prepared for understanding Sigma rule structure.
+
+
+
+  
