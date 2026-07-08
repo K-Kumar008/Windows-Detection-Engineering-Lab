@@ -1,0 +1,38 @@
+title: Detect PowerShell Execution Policy Bypass
+
+id: a1111111-1111-1111-1111-111111111111
+
+status: experimental
+
+description: Detects PowerShell launched with the ExecutionPolicy Bypass argument.
+
+author: Krishna Kumar
+
+date: 2026-07-08
+
+logsource:
+  product: windows
+  category: process_creation
+
+detection:
+  selection_image:
+    Image|endswith:
+      - '\powershell.exe'
+
+  selection_command:
+    CommandLine|contains:
+      - '-ExecutionPolicy'
+      - 'Bypass'
+
+  condition: all of selection_*
+
+falsepositives:
+  - Administrative PowerShell scripts
+  - System administration tasks
+  - Software deployment tools
+
+level: medium
+
+tags:
+  - attack.execution
+  - attack.t1059.001
