@@ -1,0 +1,23 @@
+title: Detect Mimikatz Execution
+
+id: b39fecbe-e9aa-46e1-8b0e-011d05a7730a
+
+status: experimental
+
+description: Detects execution of the Mimikatz tool
+
+author: Krishna
+
+logsource:
+  product: windows
+  category: process_creation
+
+detection:
+  selection:
+    Image|contains:
+      - mimikatz.exe
+
+condition: selection
+
+level: high
+               
