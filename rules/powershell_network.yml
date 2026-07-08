@@ -1,0 +1,23 @@
+title: Detect PowerShell Network Connection
+
+id: 88888888-8888-8888-8888-888888888888
+
+status: experimental
+
+description: Detects PowerShell making an outbound network connection
+
+author: Krishna
+
+logsource:
+  product: windows
+  category: network_connection
+
+detection:
+
+  image:
+    Image|endswith:
+      - '\powershell.exe'
+
+  condition: image
+
+level: medium
