@@ -1,0 +1,29 @@
+============================================================
+Sysmon Event ID: 3 (Network Connection)
+============================================================
+
+Event 1
+--------
+Image:
+C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+
+SourceIP:
+192.168.1.18
+
+DestinationIP:
+142.250.194.227
+
+DestinationHostname:
+lcbomp-as-in-f3.1e100.net
+
+DestinationPort:
+443
+
+Protocol:
+TCP
+
+User:
+WINDOWS11\krishna
+
+Description:
+PowerShell established an HTTPS connection after execution.
