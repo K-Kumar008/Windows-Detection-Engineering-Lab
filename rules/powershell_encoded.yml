@@ -1,0 +1,28 @@
+title: Detect PowerShell EncodedCommand
+
+id: 66666666-6666-6666-6666-666666666666
+
+status: experimental
+
+description: Detects PowerShell started with EncodedCommand
+
+author: Krishna
+
+logsource:
+  product: windows
+  category: process_creation
+
+detection:
+
+  image:
+    Image|endswith:
+      - '\powershell.exe'
+
+  encoded:
+    CommandLine|contains:
+      - '-EncodedCommand'
+      - '-enc'
+
+  condition: image and encoded
+
+level: high
