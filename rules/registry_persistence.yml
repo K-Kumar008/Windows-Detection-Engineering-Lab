@@ -1,0 +1,27 @@
+title: Detect PowerShell Registry Persistence
+
+id: aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa
+
+status: experimental
+
+description: Detects PowerShell modifying Windows Run registry keys for persistence.
+
+author: Krishna
+
+logsource:
+  product: windows
+  category: registry_set
+
+detection:
+
+  image:
+    Image|endswith:
+      - '\powershell.exe'
+
+  registry:
+    TargetObject|contains:
+      - '\Software\Microsoft\Windows\CurrentVersion\Run'
+
+  condition: image and registry
+
+level: high
