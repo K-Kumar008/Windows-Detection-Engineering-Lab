@@ -1,0 +1,23 @@
+title: Detect PowerShell File Creation
+
+id: 99999999-9999-9999-9999-999999999999
+
+status: experimental
+
+description: Detects PowerShell creating files
+
+author: Krishna
+
+logsource:
+  product: windows
+  category: file_event
+
+detection:
+
+  image:
+    Image|endswith:
+      - '\powershell.exe'
+
+  condition: image
+
+level: low
