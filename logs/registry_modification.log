@@ -1,0 +1,39 @@
+============================================================
+Sysmon Event ID: 13 (Registry Modification)
+============================================================
+
+Event 1
+--------
+Image:
+C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+
+TargetObject:
+HKCU\Software\KrishnaLab
+
+Details:
+AttackDemo=Lab9
+
+User:
+WINDOWS11\krishna
+
+Description:
+PowerShell created or modified a registry key.
+
+------------------------------------------------------------
+
+Event 2
+--------
+Image:
+C:\Windows\System32\svchost.exe
+
+TargetObject:
+\REGISTRY\A\{831d7bbf-22f8-5063-0488-04286a44d9aa}\Root\InventoryApplicationFile\filecoauth.exe\22beab129a8f84e7\LowerCaseLongPath
+
+Details:
+C:\Users\krishna\AppData\Local\Microsoft\OneDrive\26.108.0607.0002_1\filecoauth.exe
+
+User:
+NT AUTHORITY\SYSTEM
+
+Description:
+Legitimate Windows/OneDrive registry inventory update.
