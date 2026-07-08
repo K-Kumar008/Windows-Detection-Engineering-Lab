@@ -1,0 +1,65 @@
+venv/
+│
+├── bin/
+│   ├── activate                  # Activates the virtual environment
+│   ├── activate.csh              # Activation script for C Shell
+│   ├── activate.fish             # Activation script for Fish Shell
+│   ├── pip                       # pip executable inside the virtual environment
+│   ├── pip3                      # Python 3 package installer
+│   ├── python                    # Python interpreter used in this project
+│   ├── python3                   # Python 3 executable
+│   ├── sigma                     # Sigma CLI executable
+│   └── ...                       # Other executables installed via pip
+│
+├── include/
+│   └── python3.13/
+│       └── ...                   # C/C++ header files for compiling Python extensions
+│
+├── lib/
+│   └── python3.13/
+│       └── site-packages/
+│           ├── sigma_cli/         # Sigma CLI package
+│           ├── sigma/             # pySigma library
+│           ├── click/             # Command-line framework
+│           ├── requests/          # HTTP library
+│           ├── pyyaml/            # YAML parser
+│           ├── jinja2/            # Template engine
+│           ├── prettytable/       # Table formatting
+│           ├── urllib3/
+│           ├── certifi/
+│           ├── charset_normalizer/
+│           ├── idna/
+│           ├── packaging/
+│           ├── typing_extensions/
+│           ├── wcwidth/
+│           └── ...                # Other Python packages
+│
+├── lib64 -> lib                  # Symbolic link to the lib directory (Linux)
+│
+└── pyvenv.cfg                    # Configuration file for the virtual environment
+
+
+
+  What each folder means
+Folder/File	Purpose
+bin/	Contains all executables (Python, pip, Sigma CLI, activation scripts). This is the folder you interact with indirectly when you activate the virtual environment.
+include/	Stores C/C++ header files used when compiling Python packages with native extensions. Most Python projects never touch this directory directly.
+lib/	The heart of the virtual environment. It contains all installed Python libraries in site-packages.
+lib64	A Linux symbolic link that points to lib. It exists mainly for compatibility on 64-bit systems.
+pyvenv.cfg	Configuration file that tells Python where the virtual environment is located and which system Python it is based on.
+
+
+
+
+
+  The Important Thing to Remember
+
+As a cybersecurity professional, you generally do not edit anything inside venv/ manually. Python manages this directory for you.
+
+You only interact with it by:
+
+Activating the environment.
+Installing or updating packages with pip.
+Running Python or Sigma commands.
+
+Everything else inside venv/ is infrastructure that supports your project.
