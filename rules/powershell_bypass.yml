@@ -1,0 +1,32 @@
+title: Detect PowerShell ExecutionPolicy Bypass
+
+id: 55555555-5555-5555-5555-555555555555
+
+status: experimental
+
+description: Detects PowerShell started with ExecutionPolicy Bypass
+
+author: Krishna
+
+logsource:
+  product: windows
+  category: process_creation
+
+detection:
+
+  image:
+    Image|endswith:
+      - '\powershell.exe'
+
+  execution_policy:
+    CommandLine|contains:
+      - '-ExecutionPolicy'
+
+  bypass:
+    CommandLine|contains:
+      - 'Bypass'
+
+  condition: image and execution_policy and bypass
+
+level: medium
+                            
