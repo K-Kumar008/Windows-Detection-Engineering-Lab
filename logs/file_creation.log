@@ -1,0 +1,35 @@
+============================================================
+Sysmon Event ID: 11 (File Creation)
+============================================================
+
+Event 1
+--------
+Image:
+C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+
+TargetFilename:
+C:\Users\Krishna\Desktop\AttackLab.txt
+
+User:
+WINDOWS11\krishna
+
+Description:
+PowerShell created AttackLab.txt on the desktop.
+
+------------------------------------------------------------
+
+Event 2
+--------
+Image:
+C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+
+TargetFilename:
+C:\Users\Krishna\AppData\Local\Temp\__PSScriptPolicyTest__.ps1
+
+User:
+WINDOWS11\krishna
+
+Description:
+Temporary PowerShell policy test script created automatically.
+
+Note: The second event is the real event you observed during the lab (__PSScriptPolicyTest__...ps1). I shortened the random filename because it changes every execution.
