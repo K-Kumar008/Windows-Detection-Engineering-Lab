@@ -1,0 +1,27 @@
+title: Detect PowerShell Started from CMD
+
+id: 77777777-7777-7777-7777-777777777777
+
+status: experimental
+
+description: Detects PowerShell launched by Command Prompt
+
+author: Krishna
+
+logsource:
+  product: windows
+  category: process_creation
+
+detection:
+
+  image:
+    Image|endswith:
+      - '\powershell.exe'
+
+  parent:
+    ParentImage|endswith:
+      - '\cmd.exe'
+
+  condition: image and parent
+
+level: low
