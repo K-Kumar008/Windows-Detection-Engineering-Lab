@@ -136,3 +136,165 @@ SOC Analyst Checklist
 □ Decide Severity
 
 □ Escalate if necessary
+
+
+
+# Investigation Notes
+
+## Investigation Workflow
+
+Alert
+
+↓
+
+Collect Evidence
+
+↓
+
+Validate
+
+↓
+
+Correlate
+
+↓
+
+Classify
+
+↓
+
+Respond
+
+↓
+
+Document
+
+---
+
+## Evidence Sources
+
+Sysmon
+
+Windows Logs
+
+PowerShell Logs
+
+DNS
+
+Firewall
+
+Proxy
+
+EDR
+
+---
+
+## Investigation Questions
+
+What happened?
+
+When did it happen?
+
+Who executed it?
+
+Which process started it?
+
+What command was used?
+
+Was there network communication?
+
+Were files created?
+
+Was the registry modified?
+
+Was persistence established?
+
+---
+
+## Event Correlation
+
+Process
+
+↓
+
+Network
+
+↓
+
+File
+
+↓
+
+Registry
+
+↓
+
+Timeline
+
+↓
+
+Incident
+
+---
+
+## Severity Guide
+
+Low
+
+Expected activity
+
+Medium
+
+Suspicious behavior
+
+High
+
+Multiple suspicious actions
+
+Critical
+
+Confirmed compromise
+
+Credential theft
+
+Malware
+
+Ransomware
+
+---
+
+## Investigation Checklist
+
+□ Review Process Creation
+
+□ Review Network Events
+
+□ Review File Creation
+
+□ Review Registry Changes
+
+□ Review Parent Process
+
+□ Review User
+
+□ Review Command Line
+
+□ Review Destination IP
+
+□ Review Timeline
+
+□ Review Related Events
+
+---
+
+## Golden Rules
+
+Never assume.
+
+Correlate evidence.
+
+Document every finding.
+
+Escalate only when justified.
+
+Evidence drives conclusions—not assumptions.
