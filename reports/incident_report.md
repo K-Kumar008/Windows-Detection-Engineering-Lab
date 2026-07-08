@@ -74,3 +74,91 @@ High
 
 The investigation identified multiple suspicious events that warrant further investigation. The available evidence was insufficient to confirm a compromise.
                                                                                                                                                                    
+# SOC Incident Investigation Report
+
+## Executive Summary
+
+A sequence of PowerShell-related activities was observed on the Windows 11 virtual machine. The investigation focused on process creation, network communication, file creation, and registry modification recorded by Sysmon.
+
+The observed behavior included PowerShell execution with the ExecutionPolicy Bypass argument, outbound network communication, file creation, and registry modification. While these activities resemble attacker behavior, the available evidence did not conclusively confirm malicious activity.
+
+---
+
+## Timeline
+
+| Time | Activity |
+|------|----------|
+| Step 1 | Explorer.exe launched cmd.exe |
+| Step 2 | cmd.exe launched powershell.exe |
+| Step 3 | PowerShell executed with ExecutionPolicy Bypass |
+| Step 4 | PowerShell established an outbound HTTPS connection |
+| Step 5 | PowerShell created AttackLab.txt |
+| Step 6 | PowerShell modified the Windows Registry |
+
+---
+
+## Evidence Collected
+
+### Sysmon Event ID 1
+- Process Creation
+- Parent Process Analysis
+- Command Line Analysis
+
+### Sysmon Event ID 3
+- Network Connection
+- Destination IP
+- Destination Port
+- Protocol
+
+### Sysmon Event ID 11
+- File Creation
+- Target Filename
+
+### Sysmon Event ID 13
+- Registry Modification
+- Registry Path
+- Registry Value
+
+---
+
+## Analysis
+
+The sequence of events suggests PowerShell executed multiple actions after being launched through Command Prompt.
+
+Observed behaviors included:
+
+- Process execution
+- External network communication
+- File creation
+- Registry modification
+
+No malware or persistence mechanism was confirmed during the investigation. Additional evidence would be required before confirming malicious activity.
+
+---
+
+## Severity
+
+**High**
+
+Reason:
+
+Multiple suspicious behaviors occurred during a single execution chain. However, the investigation did not identify sufficient evidence to classify the activity as a confirmed compromise.
+
+---
+
+## Recommendations
+
+- Review EDR telemetry
+- Review Windows Event Logs
+- Review DNS logs
+- Review Firewall logs
+- Review Proxy logs
+- Review PowerShell history
+- Verify destination IP reputation
+- Continue monitoring the endpoint
+
+---
+
+## Conclusion
+
+This investigation demonstrated how Sysmon telemetry and Sigma detection rules can be used together to identify suspicious Windows activity while avoiding conclusions without sufficient evidence.
