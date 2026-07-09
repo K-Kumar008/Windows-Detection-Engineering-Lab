@@ -98,7 +98,26 @@ The implemented detections focus on identifying suspicious PowerShell execution,
 Additional ATT&CK techniques can be added as the detection library expands.
 
 
+## Detection Coverage Summary
 
+This project currently provides detection coverage for:
+
+- PowerShell execution
+- Suspicious PowerShell arguments
+- Parent-child process relationships
+- Outbound PowerShell network connections
+- File creation activity
+- Registry modification
+- Credential dumping attempts
+
+Future improvements include:
+
+- Scheduled Tasks
+- WMI Persistence
+- DLL Side Loading
+- LOLBins
+- Lateral Movement
+- Ransomware Behavior
 
 
 One Small Correction
