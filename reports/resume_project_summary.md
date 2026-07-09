@@ -20,3 +20,9 @@ Performed SOC-style incident investigations by correlating Sysmon events, analyz
 - Incident Response
 - Event Correlation
 - SOC Investigation
+
+# Resume Project Description
+
+## Windows Detection Engineering Lab
+
+Designed and built a Windows Detection Engineering lab using Kali Linux and Windows 11 virtual machines. Configured Sysmon to collect Windows telemetry, developed Sigma detection rules for PowerShell abuse, network activity, file creation, registry modifications, and credential dumping scenarios. Performed SOC-style incident investigations by correlating process, network, file, and registry events while mapping detections to the MITRE ATT&CK framework.
